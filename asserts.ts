@@ -27,7 +27,7 @@ function isOdd(value?: number): asserts value is 1 | 3 | 5 {
     if(!value) {
         throw new Error('valor impossivel')
     }
-    if(value % 2 === 1) {
+    if(value % 2 !== 1) {
         throw new Error('valor é par')
     }
     return
