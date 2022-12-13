@@ -12,9 +12,10 @@ export class posts {
         if(!this.loggedInUserId) {
             throw new Error('You must be logged in')
         }
+        return
     }
 
-    publicPost(id: string, title: string) {
+    publicPost(id: string, title?: string) {
         console.debug('post', id.length, title)
     }
 }
@@ -23,23 +24,19 @@ export class posts {
 
 let oneOfFirstFiveNumbers: 1 | 2 | 3 | 4 | 5;
 
-function isOdd(value?: number): asserts value is 1 | 3 | 5 {
-    if(!value) {
-        throw new Error('valor impossivel')
-    }
+function isOdd(value: number): asserts value is 1 | 3 | 5 {
     if(value % 2 !== 1) {
         throw new Error('valor é par')
     }
+    console.debug("Value is Odd")
     return
 }
 
-function isBelowFour(value?: number): asserts value is 1 | 2 | 3 | 4 {
-    if(!value) {
-        throw new Error('valor impossivel')
-    }
+function isBelowFour(value: number): asserts value is 1 | 2 | 3 | 4 {
     if(value >= 5){
         throw new Error('valor maior que 5')
     }
+    console.log("Value is below four")
     return
 }
 
