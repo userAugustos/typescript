@@ -70,4 +70,4 @@ function displayName<Titem extends Animal | Human>(item: Titem): Titem extends A
     }
 }
 
-console.debug(displayName<Animal>({ name: "animal"}))
+console.debug(displayName<Animal>({ name: "animal"}));
